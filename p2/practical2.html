@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+      .container-fluid {
+        background-color: rgba(191, 199, 199, 0.071);
+        text-align: center;
+      }
+      h1 {
+        font-size: 40px;
+        font-weight: 600;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      a{
+        color: rgb(14, 163, 232);
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 550;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" ng-app="myApp" ng-controller="myctrl">
+      <h1>{{name}}</h1>
+      <h2>{{mobile}}</h2>
+      <div class="row" style="margin: 0 160px">
+        <div class="col-sm-4">
+          <a href="{{linkedin}}">Linkedin
+          </a>
+          </div>
+        <div class="col-sm-4">
+          <a href="{{github}}"> Github</a>
+         </div>
+        <div class="col-sm-4">
+          <a href="{{mail}}">nilpatel0606@gmail.com</a>
+        </div>
+      </div>
+      <div class="row" style="border-bottom: 2px solid black">
+        <div class="col" style="text-align: left">
+          <h2>Education</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8" style="text-align: left">
+          <h3><b>BE in Information Technology</b>, Ld college of Engineering , Ahmedabad</h3>
+        <h3>CPI : 7.84</h3></div>
+        <div class="col-sm-4" style="text-align: right">May 2023</div>
+      </div>
+      <div class="row" style="border-bottom: 2px solid black;">
+        <div class="col-sm-8" style="text-align: left">
+          <h3><b>Class 12 </b>,Mangaldeep School , Ahmedabad</h3>
+        <h3>Percentage : 81</h3></div>
+        <div class="col-sm-4" style="text-align: right">May 2019</div>
+      </div>
+      <div class="row" style="border-bottom: 2px solid black">
+        <div class="col" style="text-align: left">
+          <h2>Skills</h2>
+        </div>
+      </div>
+      <div class="row" style="text-align: left;">
+        <div class="col-sm-4"><b>Languages</b> </div>
+        <div class="col-sm-8">C++, Java ,  Python , Javascript , HTML , CSS ,SQL </div>
+      </div>
+      <div class="row" style="text-align: left;">
+        <div class="col-sm-4"><b>Frameworks</b> </div>
+        <div class="col-sm-8">Django , React JS , Node JS , Express JS</div>
+      </div>
+      <div class="row" style="text-align: left;">
+        <div class="col-sm-4"><b>Tools</b> </div>
+        <div class="col-sm-8">Git , PowerBi</div>
+      </div>
+      <div class="row" style="text-align: left;">
+        <div class="col-sm-4"><b>Databases</b> </div>
+        <div class="col-sm-8">MySQL ,PstgreSQL</div>
+      </div>
+      <div class="row" style="text-align: left;border-bottom: 2px solid black;">
+        <div class="col-sm-4"><b>Soft Skills</b> </div>
+        <div class="col-sm-8">Time Management , TeamWork , Communication , Problem Solving </div>
+      </div>
+      <div class="row" style="border-bottom: 2px solid black">
+        <div class="col" style="text-align: left">
+          <h2>Projects</h2>
+        </div>
+      </div>
+      <div class="row" style="text-align: left;">
+        <h3><b>Blog App</b> ,Python, Django , PosgreSQL, HTML , CSS ,JavaScript,Bootstrap</h3>
+      </div>
+        <ul style="text-align: left;">
+          <li>Create web app in user can create, read, like other blogs.</li>
+          <li>Intergrated RichTextEditor TinyMce.</li>
+          <li>Implemented Authentication , Authorization</li>
+        </ul>
+      <div class="row" style="text-align: left;">
+        <h3><b>CRUD APP</b> ,Python, Django , PosgreSQL, HTML , CSS ,JavaScript,Bootstrap</h3>
+      </div>
+        <ul style="text-align: left;">
+          <li>Created web Application that Perform basic operation Create , Read , Update,adn Delete data from database.</li>
+        </ul>
+      <div class="row" style="border-bottom: 2px solid black">
+        <div class="col" style="text-align: left">
+          <h2>Extra Curricular Activities</h2>
+        </div>
+      </div>
+      <ul style="text-align: left; border-bottom: 2px solid black; padding: 20px;">
+        <li>3 Star at Codechef</li>
+        <li>Google Kickstart max rank 3437</li>
+        <li>Achieved rank 2092 in Hackerearth November Circuit</li>
+      </ul>
+    </div>
+    <script>
+      let app = angular.module("myApp", []);
+      app.controller("myctrl",function($scope){
+        $scope.name="Nil Patel";
+        $scope.mobile="+91 6353729445";
+        $scope.github="https://github.com/Nil0606";
+        $scope.linkedin="https://www.linkedin.com/in/nil-patel-0b7853190/";
+        $scope.mail="mailto:nilpatel0606@gmail.com";
+      });
+    </script>
+  </body>
+</html>
